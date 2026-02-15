@@ -1,121 +1,263 @@
 import Image from "next/image";
+import ScrollTrail from "@/components/ScrollTrail";
 
 export default function Home() {
   return (
-    <main className="bg-white text-gray-800">
-      {/* ================= HERO SECTION ================= */}
-      <section className="relative overflow-hidden py-28 px-6 text-center">
-        {/* Soft Background Shapes */}
-        <div className="absolute top-10 left-10 w-72 h-72 bg-indigo-50 rounded-full blur-3xl opacity-50"></div>
-        <div className="absolute bottom-0 right-20 w-96 h-96 bg-blue-50 rounded-full blur-3xl opacity-40"></div>
+    <main className="relative bg-white text-gray-800 overflow-hidden">
+      <ScrollTrail />
 
-        <div className="relative max-w-6xl mx-auto">
-          {/* Hook Text */}
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight text-[#191970]">
-            Healthcare, Structured for the Future
-          </h1>
+      {/* ================= NAVBAR ================= */}
+      <header className="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md z-50 shadow-sm">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          {/* ARAN Logo */}
+          <Image
+            src="/images/logo/Aran-Logo-AA.png"
+            alt="ARAN Logo"
+            width={160}
+            height={50}
+            className="h-10 w-auto"
+          />
 
-          <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto mb-10">
-            A cloud-native, ABDM-compliant healthcare platform designed for
-            clinics and hospitals across India.
+          <nav className="hidden md:flex gap-8 text-gray-600 font-medium">
+            <a href="#" className="hover:text-black transition">
+              Home
+            </a>
+            <a href="#features" className="hover:text-black transition">
+              Features
+            </a>
+            <a href="#" className="hover:text-black transition">
+              About
+            </a>
+            <a href="#" className="hover:text-black transition">
+              Contact
+            </a>
+          </nav>
+
+          <a
+            href="https://demo.yourdomain.com"
+            className="bg-[#450693] text-white px-5 py-2 rounded-lg hover:bg-[#2582a1] transition"
+          >
+            Demo
+          </a>
+        </div>
+      </header>
+
+      {/* ================= HERO ================= */}
+      <section className="min-h-screen flex flex-col items-center justify-center text-center px-6 relative z-10 pt-32">
+        <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight">
+          ARAN
+        </h1>
+        <p className="text-xl md:text-2xl max-w-3xl mb-8 text-gray-600">
+          A Cloud-Based, ABDM-Compliant Healthcare Platform Designed for Clinics
+          & Hospitals Across India.
+        </p>
+        {/* <a
+          href="#features"
+          className="bg-black text-white px-8 py-3 rounded-lg text-lg hover:bg-gray-800 transition"
+        >
+          Explore Features
+        </a> */}
+      </section>
+
+      {/* ================= TRUST & COMPLIANCE SECTION ================= */}
+      <section className="py-20 px-6 bg-gray-50 text-center">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-semibold mb-6">
+            Trusted, Compliant & Secure by Design
+          </h2>
+
+          <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
+            Built to meet India’s national digital health standards and global
+            interoperability frameworks.
           </p>
 
-          {/* CTAs */}
-          <div className="flex justify-center gap-4 mb-16">
-            <a
-              href="#"
-              className="bg-[#191970] text-white px-8 py-3 rounded-lg text-lg hover:opacity-90 transition"
-            >
-              View Demo
-            </a>
+          {/* Logos Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 items-center justify-items-center">
+            <div className="flex flex-col items-center space-y-4">
+              <div className="h-24 flex items-center justify-center">
+                <Image
+                  src="/images/logo/NHA-logo.png"
+                  alt="NHA Approved"
+                  width={220}
+                  height={120}
+                  className="max-h-full w-auto object-contain"
+                />
+              </div>
+              <span className="text-sm font-medium text-gray-700">
+                NHA Approved
+              </span>
+            </div>
 
-            <a
-              href="#"
-              className="border border-[#191970] text-[#191970] px-8 py-3 rounded-lg text-lg hover:bg-[#191970] hover:text-white transition"
-            >
-              Learn More
-            </a>
-          </div>
+            <div className="flex flex-col items-center space-y-4">
+              <Image
+                src="/images/logo/ABDM-logo.png"
+                alt="ABDM Compliant"
+                width={140}
+                height={80}
+                className="h-16 w-auto object-contain"
+              />
+              <span className="text-sm font-medium text-gray-700">
+                ABDM Compliant
+              </span>
+            </div>
 
-          {/* Central Illustration */}
-          <div className="flex justify-center">
-            <Image
-              src="/images/hero-illustration.png"
-              alt="ARAN Healthcare Platform"
-              width={900}
-              height={600}
-              className="max-w-full h-auto"
-            />
+            <div className="flex flex-col items-center space-y-4">
+              <Image
+                src="/images/logo/fhir.png"
+                alt="FHIR Compliant"
+                width={140}
+                height={80}
+                className="h-16 w-auto object-contain"
+              />
+              <span className="text-sm font-medium text-gray-700">
+                FHIR Compliant
+              </span>
+            </div>
+
+            <div className="flex flex-col items-center space-y-4">
+              <Image
+                src="/images/logo/azure.png"
+                alt="Securely Hosted in Azure"
+                width={140}
+                height={80}
+                className="h-16 w-auto object-contain"
+              />
+              <span className="text-sm font-medium text-gray-700">
+                Securely Hosted on Microsoft Azure
+              </span>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ================= FEATURES SECTION ================= */}
-      <section className="bg-gray-50 py-20 px-6">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-5 gap-8 text-center">
-          {/* Feature 1 */}
-          <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition overflow-hidden flex flex-col">
+      {/* ================= FEATURES ================= */}
+      {/* Explore Button Section */}
+      <section className="pb-16 text-center">
+        <a
+          id="trail-start"
+          href="#features"
+          className="inline-block bg-[#450693] text-white px-8 py-3 rounded-lg text-lg hover:bg-[#2582a1] transition"
+        >
+          Explore Features
+        </a>
+      </section>
+      <section
+        id="features"
+        className="py-24 px-6 max-w-6xl mx-auto space-y-32 relative z-10"
+      >
+        {/* 1 Cloud */}
+        <div
+          id="trail-start"
+          className="grid md:grid-cols-2 gap-12 items-center"
+        >
+          <Image
+            src="/images/ver2/cloud-saas-blue.png"
+            alt="Cloud Based SaaS"
+            width={1000}
+            height={800}
+            className="rounded-2xl hover:scale-105 transition duration-500"
+          />
+          <div>
+            <h2 className="text-3xl font-semibold mb-4">Cloud-Based SaaS</h2>
+            <p className="text-lg text-gray-600">
+              Secure access to your hospital system anytime, anywhere — without
+              complex installations or local servers.
+            </p>
+          </div>
+        </div>
+
+        {/* 2 ABDM FHIR */}
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="md:order-2">
             <Image
-              src="/images/cloud-saas-icon.png"
+              src="/images/abdm-fhir-male.png"
               alt="ABDM FHIR EMR"
-              width={1000}
-              height={1000}
-              className="w-full h-auto object-cover"
+              width={600}
+              height={400}
+              className="rounded-2xl hover:scale-105 transition duration-500"
             />
-
-            <div className="p-6 text-center">
-              <h3 className="font-semibold text-[#191970] text-lg">
-                Cloud Based SaaS
-              </h3>
-            </div>
           </div>
+          <div>
+            <h2 className="text-3xl font-semibold mb-4">
+              ABDM & FHIR-Compliant EMR
+            </h2>
+            <p className="text-lg text-gray-600">
+              Structured electronic medical records built for India’s digital
+              health ecosystem and future interoperability.
+            </p>
+          </div>
+        </div>
 
-          {/* Feature 2 */}
-           <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition overflow-hidden flex flex-col">
+        {/* 3 Indian Drug Codes + SNOMED CT */}
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <Image
+            src="/images/ver2/snomed-cdci-blue.png"
+            alt="Indian Drug Codes and SNOMED CT Integration"
+            width={1000}
+            height={800}
+            className="rounded-2xl hover:scale-105 transition duration-500"
+          />
+          <div>
+            <h2 className="text-3xl font-semibold mb-4">
+              Indian Drug Codes + SNOMED CT Integration
+            </h2>
+            <p className="text-lg text-gray-600">
+              Standardized prescriptions powered by Common Drug Codes for India (CDCI) provided under MoHFW EHR standards, integrated with SNOMED CT® global clinical terminology — ensuring structured, compliant, and interoperable health records across systems.
+            </p>
+          </div>
+        </div>
+
+        {/* 4 Multi Branch */}
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="md:order-2">
             <Image
-              src="/images/abdm-fhir-icon.png"
-              alt="ABDM FHIR EMR"
-              width={1000}
-              height={1000}
-              className="w-full h-auto object-cover"
+              src="/images/multi-branch-rba-org.png"
+              alt="Multi Branch Role Based Access"
+              width={600}
+              height={400}
+              className="rounded-2xl hover:scale-105 transition duration-500"
             />
-
-            <div className="p-6 text-center">
-              <h3 className="font-semibold text-[#191970] text-lg">
-                ABDM + FHIR – EMR
-              </h3>
-            </div>
           </div>
-
-          {/* Feature 3 */}
-          <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
-            <div className="h-16 flex items-center justify-center mb-6 text-gray-400">
-              Icon Placeholder
-            </div>
-            <h3 className="font-semibold text-[#191970]">Multi-Branch + RBA</h3>
+          <div>
+            <h2 className="text-3xl font-semibold mb-4">
+              Multi-Branch with Role-Based Access
+            </h2>
+            <p className="text-lg text-gray-600">
+              Manage multiple locations with controlled access for doctors,
+              nurses, and administrative teams.
+            </p>
           </div>
+        </div>
 
-          {/* Feature 4 */}
-          <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
-            <div className="h-16 flex items-center justify-center mb-6 text-gray-400">
-              Icon Placeholder
-            </div>
-            <h3 className="font-semibold text-[#191970]">
-              Scalable for Any Size
-            </h3>
-          </div>
-
-          {/* Feature 5 */}
-          <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
-            <div className="h-16 flex items-center justify-center mb-6 text-gray-400">
-              Icon Placeholder
-            </div>
-            <h3 className="font-semibold text-[#191970]">
-              Drug Codes + SNOMED CT
-            </h3>
+        {/* 5 Scalable */}
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <Image
+            src="/images/ver2/scalable-hosp-blue.png"
+            alt="Scalable Healthcare System"
+            width={600}
+            height={400}
+            className="rounded-2xl hover:scale-105 transition duration-500"
+          />
+          <div>
+            <h2 className="text-3xl font-semibold mb-4">
+              Built for Clinics & Hospitals of Any Size
+            </h2>
+            <p className="text-lg text-gray-600">
+              From single-doctor clinics to multi-speciality hospitals — ARAN
+              scales with your growth.
+            </p>
           </div>
         </div>
       </section>
+
+      {/* ================= FOOTER ================= */}
+      <footer className="bg-black text-white py-16 px-6 mt-32">
+        <div className="max-w-7xl mx-auto text-center">
+          <p className="text-gray-400">
+            © {new Date().getFullYear()} ARAN. All rights reserved.
+          </p>
+        </div>
+      </footer>
     </main>
   );
 }
