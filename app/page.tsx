@@ -11,7 +11,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           {/* ARAN Logo */}
           <Image
-            src="/images/logo/Aran-Logo-AA.png"
+            src="/images/aran-logo-red.svg"
             alt="ARAN Logo"
             width={160}
             height={50}
@@ -76,7 +76,7 @@ export default function Home() {
             <div className="flex flex-col items-center space-y-4">
               <div className="h-24 flex items-center justify-center">
                 <Image
-                  src="/images/logo/NHA-logo.png"
+                  src="/images/logo/NHA-logo.jpg"
                   alt="NHA Approved"
                   width={220}
                   height={120}
@@ -90,7 +90,7 @@ export default function Home() {
 
             <div className="flex flex-col items-center space-y-4">
               <Image
-                src="/images/logo/ABDM-logo.png"
+                src="/images/logo/ABDM-logo.jpg"
                 alt="ABDM Compliant"
                 width={140}
                 height={80}
@@ -103,7 +103,7 @@ export default function Home() {
 
             <div className="flex flex-col items-center space-y-4">
               <Image
-                src="/images/logo/fhir.png"
+                src="/images/logo/fhir.jpg"
                 alt="FHIR Compliant"
                 width={140}
                 height={80}
@@ -116,7 +116,7 @@ export default function Home() {
 
             <div className="flex flex-col items-center space-y-4">
               <Image
-                src="/images/logo/azure.png"
+                src="/images/logo/azure.jpg"
                 alt="Securely Hosted in Azure"
                 width={140}
                 height={80}
@@ -151,7 +151,7 @@ export default function Home() {
           className="grid md:grid-cols-2 gap-12 items-center"
         >
           <Image
-            src="/images/ver2/cloud-saas-blue.png"
+            src="/images/ver2/cloud-saas-blue.jpg"
             alt="Cloud Based SaaS"
             width={1000}
             height={800}
@@ -170,7 +170,7 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="md:order-2">
             <Image
-              src="/images/abdm-fhir-male.png"
+              src="/images/abdm-fhir-male-org.jpg"
               alt="ABDM FHIR EMR"
               width={600}
               height={400}
@@ -191,7 +191,7 @@ export default function Home() {
         {/* 3 Indian Drug Codes + SNOMED CT */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <Image
-            src="/images/ver2/snomed-cdci-blue.png"
+            src="/images/ver2/snomed-cdci-blue.jpg"
             alt="Indian Drug Codes and SNOMED CT Integration"
             width={1000}
             height={800}
@@ -211,7 +211,7 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="md:order-2">
             <Image
-              src="/images/multi-branch-rba-org.png"
+              src="/images/multi-branch-rba-org.jpg"
               alt="Multi Branch Role Based Access"
               width={600}
               height={400}
@@ -232,7 +232,7 @@ export default function Home() {
         {/* 5 Scalable */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <Image
-            src="/images/ver2/scalable-hosp-blue.png"
+            src="/images/ver2/scalable-hosp-blue.jpg"
             alt="Scalable Healthcare System"
             width={600}
             height={400}
