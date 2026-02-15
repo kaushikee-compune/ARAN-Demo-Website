@@ -90,7 +90,7 @@ export default function Home() {
 
             <div className="flex flex-col items-center space-y-4">
               <Image
-                src="/images/logo/ABDM-logo.jpg"
+                src="/images/logo/ABDM-logo.png"
                 alt="ABDM Compliant"
                 width={140}
                 height={80}
@@ -103,7 +103,7 @@ export default function Home() {
 
             <div className="flex flex-col items-center space-y-4">
               <Image
-                src="/images/logo/fhir.jpg"
+                src="/images/logo/fhir.png"
                 alt="FHIR Compliant"
                 width={140}
                 height={80}
@@ -116,7 +116,7 @@ export default function Home() {
 
             <div className="flex flex-col items-center space-y-4">
               <Image
-                src="/images/logo/azure.jpg"
+                src="/images/logo/azure.png"
                 alt="Securely Hosted in Azure"
                 width={140}
                 height={80}
