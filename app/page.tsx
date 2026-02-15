@@ -43,20 +43,33 @@ export default function Home() {
       </header>
 
       {/* ================= HERO ================= */}
-      <section className="min-h-screen flex flex-col items-center justify-center text-center px-6 relative z-10 pt-32">
-        <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight">
-          ARAN
-        </h1>
-        <p className="text-xl md:text-2xl max-w-3xl mb-8 text-gray-600">
-          A Cloud-Based, ABDM-Compliant Healthcare Platform Designed for Clinics
-          & Hospitals Across India.
-        </p>
-        {/* <a
-          href="#features"
-          className="bg-black text-white px-8 py-3 rounded-lg text-lg hover:bg-gray-800 transition"
-        >
-          Explore Features
-        </a> */}
+
+      {/* ================= FULL WIDTH BANNER ================= */}
+      {/* ================= HERO WITH LIGHT BANNER ================= */}
+      <section className="relative w-full h-[85vh] mt-20 flex items-center justify-center text-center">
+        {/* Background Image */}
+        <Image
+          src="/images/aran-banner.png"
+          alt="ARAN Banner"
+          fill
+          priority
+          className="object-cover opacity-50"
+        />
+
+        {/* Optional soft color overlay for brand tone */}
+        <div className="absolute inset-0 bg-white/40"></div>
+
+        {/* Hero Content */}
+        <div className="relative z-10 px-6 max-w-4xl">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight text-[#450693]">
+            ARAN
+          </h1>
+
+          <p className="text-xl md:text-2xl text-gray-700">
+            A Cloud-Based, ABDM-Compliant Healthcare Platform Designed for
+            Clinics & Hospitals Across India.
+          </p>
+        </div>
       </section>
 
       {/* ================= TRUST & COMPLIANCE SECTION ================= */}
@@ -202,7 +215,10 @@ export default function Home() {
               Indian Drug Codes + SNOMED CT Integration
             </h2>
             <p className="text-lg text-gray-600">
-              Standardized prescriptions powered by Common Drug Codes for India (CDCI) provided under MoHFW EHR standards, integrated with SNOMED CT® global clinical terminology — ensuring structured, compliant, and interoperable health records across systems.
+              Standardized prescriptions powered by Common Drug Codes for India
+              (CDCI) provided under MoHFW EHR standards, integrated with SNOMED
+              CT® global clinical terminology — ensuring structured, compliant,
+              and interoperable health records across systems.
             </p>
           </div>
         </div>
