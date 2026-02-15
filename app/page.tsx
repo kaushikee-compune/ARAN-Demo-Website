@@ -51,7 +51,7 @@ export default function Home() {
 
           <p className="text-lg md:text-2xl text-white/90">
             A Cloud-Based, ABDM-Compliant Healthcare Platform Designed for
-            Clinics & Hospitals Across India.
+            Clinics & Hospitals Across India...
           </p>
         </div>
 
