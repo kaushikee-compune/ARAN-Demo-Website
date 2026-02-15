@@ -7,7 +7,7 @@ export default function Home() {
       <ScrollTrail />
 
       {/* ================= NAVBAR ================= */}
-      <header className="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md z-50 shadow-sm">
+      <header className="fixed top-0 left-0 w-full bg-white/100 backdrop-blur-md z-50 shadow-sm">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           {/* ARAN Logo */}
           <Image
@@ -35,7 +35,7 @@ export default function Home() {
 
           <a
             href="https://demo.yourdomain.com"
-            className="bg-[#450693] text-white px-5 py-2 rounded-lg hover:bg-[#2582a1] transition"
+            className="bg-[#000a50] text-white px-5 py-2 rounded-lg hover:bg-[#2582a1] transition"
           >
             Demo
           </a>
@@ -43,32 +43,30 @@ export default function Home() {
       </header>
 
       {/* ================= HERO ================= */}
-
-      {/* ================= FULL WIDTH BANNER ================= */}
-      {/* ================= HERO WITH LIGHT BANNER ================= */}
-      <section className="relative w-full h-[85vh] mt-20 flex items-center justify-center text-center">
-        {/* Background Image */}
-        <Image
-          src="/images/aran-banner.png"
-          alt="ARAN Banner"
-          fill
-          priority
-          className="object-cover opacity-50"
-        />
-
-        {/* Optional soft color overlay for brand tone */}
-        <div className="absolute inset-0 bg-white/40"></div>
-
-        {/* Hero Content */}
-        <div className="relative z-10 px-6 max-w-4xl">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight text-[#450693]">
+      <section className="relative bg-[#000a50] text-white pt-32 pb-28 px-6 text-center overflow-hidden">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
             ARAN
           </h1>
 
-          <p className="text-xl md:text-2xl text-gray-700">
+          <p className="text-lg md:text-2xl text-white/90">
             A Cloud-Based, ABDM-Compliant Healthcare Platform Designed for
             Clinics & Hospitals Across India.
           </p>
+        </div>
+
+        {/* Curved Bottom Shape */}
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
+          <svg
+            className="relative block w-full h-[90px]"
+            viewBox="0 0 1440 320"
+            preserveAspectRatio="none"
+          >
+            <path
+              fill="#ffffff"
+              d="M0,200 Q720,80 1440,200 L1440,320 L0,320 Z"
+            />
+          </svg>
         </div>
       </section>
 
@@ -149,7 +147,7 @@ export default function Home() {
         <a
           id="trail-start"
           href="#features"
-          className="inline-block bg-[#450693] text-white px-8 py-3 rounded-lg text-lg hover:bg-[#2582a1] transition"
+          className="inline-block bg-[#000a50] text-white px-8 py-3 rounded-lg text-lg hover:bg-[#2582a1] transition"
         >
           Explore Features
         </a>
