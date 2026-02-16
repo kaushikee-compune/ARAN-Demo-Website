@@ -278,12 +278,12 @@
 
 "use client";
 
-import { useState } from "react";
+//import { useState } from "react";
 import Image from "next/image";
 // import ScrollTrail from "@/components/ScrollTrail";
 
 export default function Home() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  //const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <main className="relative bg-white text-gray-800 overflow-hidden">
@@ -292,71 +292,26 @@ export default function Home() {
       {/* ================= NAVBAR ================= */}
       <header className="fixed top-0 left-0 w-full bg-white z-50 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 md:px-6 py-4 flex items-center justify-between">
-          {/* Logo */}
-          <Image
-            src="/images/aran-logo-red.svg"
-            alt="ARAN Logo"
-            width={160}
-            height={50}
-            className="h-9 w-auto"
-          />
+          {/* Logo + Text */}
+          <div className="flex flex-col items-start">
+            <Image
+              src="/images/aran-logo-blu.png"
+              alt="ARAN Logo"
+              width={160}
+              height={50}
+              className="h-9 w-auto"
+            />
+           
+          </div>
 
-          {/* Desktop Nav */}
-          <nav className="hidden md:flex gap-8 text-gray-700 font-medium">
-            <a href="#" className="hover:text-[#000a50] transition">
-              Home
-            </a>
-            <a href="#features" className="hover:text-[#000a50] transition">
-              Features
-            </a>
-            <a href="#" className="hover:text-[#000a50] transition">
-              About
-            </a>
-            <a href="#" className="hover:text-[#000a50] transition">
-              Contact
-            </a>
-          </nav>
-
-          {/* Demo Button */}
+          {/* Demo Button (Visible on all devices) */}
           <a
-            href="#"
-            className="hidden md:inline-block bg-[#000a50] text-white px-5 py-2 rounded-lg hover:bg-[#2582a1] transition"
+            href="https://www.hims.aran.care"
+            className="bg-[#000a50] text-white px-4 md:px-6 py-2 rounded-lg text-sm md:text-base hover:bg-[#2582a1] transition"
           >
             Demo
           </a>
-
-          {/* Mobile Hamburger */}
-          <button
-            className="md:hidden text-[#000a50]"
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            ☰
-          </button>
         </div>
-
-        {/* Mobile Menu */}
-        {menuOpen && (
-          <div className="md:hidden bg-white shadow-md px-6 py-4 space-y-4">
-            <a href="#" className="block">
-              Home
-            </a>
-            <a href="#features" className="block">
-              Features
-            </a>
-            <a href="#" className="block">
-              About
-            </a>
-            <a href="#" className="block">
-              Contact
-            </a>
-            <a
-              href="#"
-              className="block bg-[#000a50] text-white text-center py-2 rounded-lg"
-            >
-              Demo
-            </a>
-          </div>
-        )}
       </header>
 
       {/* ================= HERO ================= */}
@@ -365,8 +320,9 @@ export default function Home() {
           <h1 className="text-3xl md:text-6xl font-bold mb-6 tracking-tight">
             ARAN
           </h1>
-
+          <p className="text-base md:text-2xl text-white/90 mb-8"> Healthcare Management Information System </p>
           <p className="text-base md:text-2xl text-white/90 mb-8">
+            
             A Cloud-Based, ABDM-Compliant Healthcare Platform Designed for
             Clinics & Hospitals Across India.
           </p>
@@ -409,12 +365,12 @@ export default function Home() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 items-center justify-items-center">
             {[
-              { src: "/images/logo/NHA-logo.jpg", label: "NHA Approved" },
+              { src: "/images/logo/NHA-logo.png", label: "NHA Approved" },
               { src: "/images/logo/ABDM-logo.png", label: "ABDM Compliant" },
               { src: "/images/logo/fhir.png", label: "FHIR Compliant" },
               {
-                src: "/images/logo/azure.png",
-                label: "Hosted on Microsoft Azure",
+                src: "/images/logo/snomed.png",
+                label: "Integrated with Snomed CT and CDCI",
               },
             ].map((item, i) => (
               <div key={i} className="flex flex-col items-center space-y-4">
@@ -545,9 +501,37 @@ export default function Home() {
 
       {/* ================= FOOTER ================= */}
       <footer className="bg-black text-white py-12 px-6">
-        <div className="max-w-7xl mx-auto text-center">
-          <p className="text-sm text-gray-400">
-            © {new Date().getFullYear()} ARAN. All rights reserved.
+        <div className="max-w-7xl mx-auto text-center space-y-6">
+          {/* Footer Links */}
+          <div className="flex flex-col md:flex-row justify-center gap-6 text-sm text-gray-300">
+            <a
+              href="https://aran.care"
+              target="_blank"
+              className="hover:text-white transition"
+            >
+              About Us
+            </a>
+
+            <a
+              href="https://aran.care/blogs/"
+              target="_blank"
+              className="hover:text-white transition"
+            >
+              Blogs
+            </a>
+
+            <a
+              href="https://aran.care/contact/"
+              target="_blank"
+              className="hover:text-white transition"
+            >
+              Contact
+            </a>
+          </div>
+
+          {/* Copyright */}
+          <p className="text-xs text-gray-400">
+            © {new Date().getFullYear()} ARAN HIMS. All rights reserved.
           </p>
         </div>
       </footer>
